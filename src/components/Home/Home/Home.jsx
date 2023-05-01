@@ -42,7 +42,92 @@ const Home = () => {
           </p>
         </div>
 
-        
+        <div className="row row-cols-1 row-cols-md-2 g-4 chef-img mt-4">
+          <div className="chef">
+            <Card.Img variant="top" src={chef1} />
+            <Card.Body>
+              <Card.Title>Baek Jong-won</Card.Title>
+              <Card.Text>
+              <p>Years of experience: 10</p>
+              <p>Numbers of recipes : 25</p>
+              <p>Likes: 200K</p>
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center">
+            <Button className="text-black" variant="success">View Recipes Button</Button>
+            </Card.Footer>
+          </div>
+          <div className="chef">
+            <Card.Img variant="top" src={chef2} />
+            <Card.Body>
+              <Card.Title>Roy Choi</Card.Title>
+              <Card.Text>
+              <p>Years of experience: 15</p>
+              <p>Numbers of recipes : 35</p>
+              <p>Likes: 500K</p>
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center">
+            <Button className="text-black" variant="success">View Recipes Button</Button>
+            </Card.Footer>
+          </div>
+          <div className="chef">
+            <Card.Img variant="top" src={chef3} />
+            <Card.Body>
+              <Card.Title>Lim Ji-ho</Card.Title>
+              <Card.Text>
+              <p>Years of experience: 12</p>
+              <p>Numbers of recipes : 17</p>
+              <p>Likes: 300K</p>
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center">
+            <Button className="text-black" variant="success">View Recipes Button</Button>
+            </Card.Footer>
+          </div>
+          <div className="chef">
+            <Card.Img variant="top" src={chef4} />
+            <Card.Body>
+              <Card.Title>Lim Ji-ho</Card.Title>
+              <Card.Text>
+              <p>Years of experience: 17</p>
+              <p>Numbers of recipes : 22</p>
+              <p>Likes: 150K</p>
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center">
+            <Button className="text-black" variant="success">View Recipes Button</Button>
+            </Card.Footer>
+          </div>
+          <div className="chef">
+            <Card.Img variant="top" src={chef5} />
+            <Card.Body>
+              <Card.Title>Lim Ji-ho</Card.Title>
+              <Card.Text>
+              <p>Years of experience: 26</p>
+              <p>Numbers of recipes : 40</p>
+              <p>Likes: 700K</p>
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center">
+            <Button className="text-black" variant="success">View Recipes Button</Button>
+            </Card.Footer>
+          </div>
+          <div className="chef">
+            <Card.Img variant="top" src={chef2} />
+            <Card.Body>
+              <Card.Title>Lim Ji-ho</Card.Title>
+              <Card.Text>
+              <p>Years of experience: 30</p>
+              <p>Numbers of recipes : 70</p>
+              <p>Likes: 1M</p>
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-center">
+            <Button className="text-black" variant="success">View Recipes Button</Button>
+            </Card.Footer>
+          </div>
+        </div>
       </Container>
     </div>
   );

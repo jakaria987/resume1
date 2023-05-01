@@ -1,11 +1,19 @@
-import React from 'react';
+import React from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
 
 const Header = () => {
-    return (
-        <div>
-            <h1>this is header</h1>
-        </div>
-    );
+  return (
+    <Container>
+      <div className="text-center text-success">
+        <h1>THE KOREAN CHEF HUB</h1>
+        <p>
+          <small>a premium chef house</small>
+        </p>
+      </div>
+
+      
+    </Container>
+  );
 };
 
 export default Header;

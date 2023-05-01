@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -23,7 +24,7 @@ const Header = () => {
             <Nav>
               <Nav.Link href="#deets">picture</Nav.Link>
               <Nav.Link eventKey={2} href="#memes">
-              <Button variant="dark">Login</Button>
+              <Button variant="dark"><Link to='/login'>Login</Link></Button>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

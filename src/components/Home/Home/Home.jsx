@@ -202,7 +202,37 @@ const Home = () => {
           </div>
         </div>
 
-        
+        {/* extra section 2*/}
+        <div className="my-4">
+          <div class="row row-cols-1 row-cols-md-2 g-4 d-flex align-items-center">
+            <div className="col">
+              <div className="card">
+                <img src={hot3} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">Vietnamese Style Grilled Five Spice Chicken</h5>
+                  <p className="card-text">
+                  It may not be in my best interest to admit this, but here goes nothing: grilling chicken scares me
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col ">
+              <div className="card">
+                <div className="card-body">
+                  <h2 className="card-title">News and Events</h2>
+                  <h5>Best Bread pairing for Barbeque?</h5>
+                  <p className="card-text">
+                  Welcome to WordPress. This is your first post. Edit or delete it
+                  </p>
+                  <h5>Best Bread pairing for Barbeque?</h5>
+                  <p className="card-text">
+                  Quis sed mid elit, risus aliquet placerat. Pid et, vel phasellus augue
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </Container>
     </div>
   );

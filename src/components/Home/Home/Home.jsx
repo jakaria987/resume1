@@ -1,17 +1,22 @@
 import React from "react";
 import { Button, Card, CardGroup, Col, Container, Row } from "react-bootstrap";
 import banner from "../../../assets/banner.jpg";
-import chef1 from '../../../assets/chef1.jpg'
-import chef2 from '../../../assets/chef2.jpg'
-import chef3 from '../../../assets/chef3.jpg'
-import chef4 from '../../../assets/chef4.jpg'
-import chef5 from '../../../assets/chef5.jpg'
+import chef1 from "../../../assets/chef1.jpg";
+import chef2 from "../../../assets/chef2.jpg";
+import chef3 from "../../../assets/chef3.jpg";
+import chef4 from "../../../assets/chef4.jpg";
+import chef5 from "../../../assets/chef5.jpg";
+import hot1 from "../../../assets/hot1.jpg";
+import hot2 from "../../../assets/hot2.jpg";
+import hot3 from "../../../assets/hot3.jpg";
+import hot4 from "../../../assets/hot4.jpg";
 import "./Home.css";
 
 const Home = () => {
   return (
     <div className="mt-4">
       <Container>
+        {/* banner */}
         <div className=" d-flex align-items-center gap-4">
           <p>
             <img className="size" src={banner} alt="" />
@@ -42,92 +47,162 @@ const Home = () => {
           </p>
         </div>
 
+        {/* chef profile */}
         <div className="row row-cols-1 row-cols-md-2 g-4 chef-img mt-4">
           <div className="chef">
             <Card.Img variant="top" src={chef1} />
             <Card.Body>
               <Card.Title>Baek Jong-won</Card.Title>
-              <Card.Text>
-              <p>Years of experience: 10</p>
-              <p>Numbers of recipes : 25</p>
-              <p>Likes: 200K</p>
+              <Card.Text className="mt-4">
+                <p>Years of experience: 10</p>
+                <p>Numbers of recipes : 25</p>
+                <p>Likes: 200K</p>
               </Card.Text>
             </Card.Body>
             <Card.Footer className="text-center">
-            <Button className="text-black" variant="success">View Recipes Button</Button>
+              <Button className="text-black" variant="success">
+                View Recipes Button
+              </Button>
             </Card.Footer>
           </div>
           <div className="chef">
             <Card.Img variant="top" src={chef2} />
             <Card.Body>
               <Card.Title>Roy Choi</Card.Title>
-              <Card.Text>
-              <p>Years of experience: 15</p>
-              <p>Numbers of recipes : 35</p>
-              <p>Likes: 500K</p>
+              <Card.Text className="mt-4">
+                <p>Years of experience: 15</p>
+                <p>Numbers of recipes : 35</p>
+                <p>Likes: 500K</p>
               </Card.Text>
             </Card.Body>
             <Card.Footer className="text-center">
-            <Button className="text-black" variant="success">View Recipes Button</Button>
+              <Button className="text-black" variant="success">
+                View Recipes Button
+              </Button>
             </Card.Footer>
           </div>
           <div className="chef">
             <Card.Img variant="top" src={chef3} />
             <Card.Body>
               <Card.Title>Lim Ji-ho</Card.Title>
-              <Card.Text>
-              <p>Years of experience: 12</p>
-              <p>Numbers of recipes : 17</p>
-              <p>Likes: 300K</p>
+              <Card.Text className="mt-4">
+                <p>Years of experience: 12</p>
+                <p>Numbers of recipes : 17</p>
+                <p>Likes: 300K</p>
               </Card.Text>
             </Card.Body>
             <Card.Footer className="text-center">
-            <Button className="text-black" variant="success">View Recipes Button</Button>
+              <Button className="text-black" variant="success">
+                View Recipes Button
+              </Button>
             </Card.Footer>
           </div>
           <div className="chef">
             <Card.Img variant="top" src={chef4} />
             <Card.Body>
               <Card.Title>Lim Ji-ho</Card.Title>
-              <Card.Text>
-              <p>Years of experience: 17</p>
-              <p>Numbers of recipes : 22</p>
-              <p>Likes: 150K</p>
+              <Card.Text className="mt-4">
+                <p>Years of experience: 17</p>
+                <p>Numbers of recipes : 22</p>
+                <p>Likes: 150K</p>
               </Card.Text>
             </Card.Body>
             <Card.Footer className="text-center">
-            <Button className="text-black" variant="success">View Recipes Button</Button>
+              <Button className="text-black" variant="success">
+                View Recipes Button
+              </Button>
             </Card.Footer>
           </div>
           <div className="chef">
             <Card.Img variant="top" src={chef5} />
             <Card.Body>
               <Card.Title>Lim Ji-ho</Card.Title>
-              <Card.Text>
-              <p>Years of experience: 26</p>
-              <p>Numbers of recipes : 40</p>
-              <p>Likes: 700K</p>
+              <Card.Text className="mt-4">
+                <p>Years of experience: 26</p>
+                <p>Numbers of recipes : 40</p>
+                <p>Likes: 700K</p>
               </Card.Text>
             </Card.Body>
             <Card.Footer className="text-center">
-            <Button className="text-black" variant="success">View Recipes Button</Button>
+              <Button className="text-black" variant="success">
+                View Recipes Button
+              </Button>
             </Card.Footer>
           </div>
           <div className="chef">
             <Card.Img variant="top" src={chef2} />
             <Card.Body>
               <Card.Title>Lim Ji-ho</Card.Title>
-              <Card.Text>
-              <p>Years of experience: 30</p>
-              <p>Numbers of recipes : 70</p>
-              <p>Likes: 1M</p>
+              <Card.Text className="mt-4">
+                <p>Years of experience: 30</p>
+                <p>Numbers of recipes : 70</p>
+                <p>Likes: 1M</p>
               </Card.Text>
             </Card.Body>
             <Card.Footer className="text-center">
-            <Button className="text-black" variant="success">View Recipes Button</Button>
+              <Button className="text-black" variant="success">
+                View Recipes Button
+              </Button>
             </Card.Footer>
           </div>
         </div>
+
+        {/* extra section 1 */}
+        <div>
+          <h1 className="my-4">What hot !</h1>
+          <div className="row row-cols-2 row-cols-md-4 g-4">
+            <div className="col">
+              <div className="card">
+                <img src={hot1} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">Chocolate</h5>
+                  <p className="card-text">
+                    2 cups cream 120 grams dark chocolate, chopped 2 bags of
+                    earl grey tea
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card">
+                <img src={hot2} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">health</h5>
+                  <p className="card-text">
+                    Eat a variety of nutrient-rich foods. More than 40
+                    different nutrients for good health
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card">
+                <img src={hot3} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">Rolls</h5>
+                  <p className="card-text">
+                    You know how bacon is all the rage these days? Bacon dipped
+                    in chocolate, bacon
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card">
+                <img src={hot4} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h5 className="card-title">Economical</h5>
+                  <p className="card-text">
+                    Quis sed mid elit, risus aliquet placerat. Pid et, vel
+                    phasellus augue a ultrices,
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
       </Container>
     </div>
   );

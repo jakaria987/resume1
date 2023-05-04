@@ -8,6 +8,7 @@ import Register from "../components/Login/Register";
 import Home from "../components/Home/Home/Home";
 import PrivateRoute from "./PrivateRoute";
 import Chef from "../components/Home/Chef/Chef";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 
 
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <LoginLayout></LoginLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children : [
             {
                 path: '/',
@@ -35,6 +37,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path:'/blog',

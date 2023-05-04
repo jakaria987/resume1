@@ -6,12 +6,7 @@ const Chef = () => {
 
 
 const [singleChef, setSingleChef] = useState([]);
-useEffect(() => {
-    fetch("http://localhost:5000/singleChef")
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.error(error));
-  }, []);
+
 
   return (
     <div>

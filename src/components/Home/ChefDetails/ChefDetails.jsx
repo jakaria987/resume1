@@ -10,7 +10,7 @@ const ChefDetails = ({ chef }) => {
   const chefDetails = useLoaderData();
 
   useEffect(() => {
-    fetch("http://localhost:5000/chef")
+    fetch("https://assignment10-server-jakaria987.vercel.app/chef")
       .then((res) => res.json())
       .then((data) => setSingleChef(data))
       .catch((error) => console.error(error));

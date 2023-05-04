@@ -19,7 +19,7 @@ const Home = () => {
   useEffect(() => {
     fetch("http://localhost:5000/chef")
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => setChefs(data))
       .catch((error) => console.error(error));
   }, []);
 
@@ -61,12 +61,12 @@ const Home = () => {
           {/* chef profile */}
           
 
-            {/* {
-                chefDetails.map(chef => <ChefDetails 
+            {
+                chefs.map(chef => <ChefDetails 
                 key={chef.id} 
                 chef={chef}
                 ></ChefDetails>)
-            } */}
+            }
 
           {/* <div className="row row-cols-1 row-cols-md-2 g-4 chef-img mt-4">
             <div className="chef">

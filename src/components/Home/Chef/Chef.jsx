@@ -1,8 +1,9 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 
-const Chef = ({ chef }) => {
-    const { id, name } = chef;
+const Chef = ({ cheff }) => {
+    console.log(cheff);
+    const { id, name } = cheff;
   return (
     <div>
       <Card className="text-center">

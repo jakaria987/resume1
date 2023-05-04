@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
+import { useLoaderData, useParams } from "react-router-dom";
 
-const Chef = ({ cheff }) => {
-    console.log(cheff);
-    const { id, name } = cheff;
+const Chef = () => {
+
+
+const [singleChef, setSingleChef] = useState([]);
+useEffect(() => {
+    fetch("http://localhost:5000/singleChef")
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
+  }, []);
+
   return (
     <div>
       <Card className="text-center">
-        <Card.Header>Featured</Card.Header>
+        <Card.Header>{name}</Card.Header>
         <Card.Body>
           <Card.Title>Special title treatment</Card.Title>
           <Card.Text>

@@ -12,6 +12,12 @@ const NavigationBar = () => {
     }
   return (
     <Container>
+      <div className="text-center text-success">
+        <h1>THE KOREAN CHEF HUB</h1>
+        <p>
+          <small>a premium chef house</small>
+        </p>
+      </div>
       <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
         <Container>
           <Navbar.Brand href="#home">
@@ -21,10 +27,10 @@ const NavigationBar = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#features">
-                <Link to="/">Home</Link>
+                <Link className="text-white" to="/">Home</Link>
               </Nav.Link>
               <Nav.Link href="#pricing">
-                <Link to="/blog">Blog</Link>
+                <Link className="text-white" to="/blog">Blog</Link>
               </Nav.Link>
             </Nav>
             <Nav>

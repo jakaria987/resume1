@@ -7,14 +7,11 @@ import hot2 from "../../../assets/hot2.jpg";
 import hot3 from "../../../assets/hot3.jpg";
 import hot4 from "../../../assets/hot4.jpg";
 import "./Home.css";
-import { Link, useLoaderData, useParams } from "react-router-dom";
 import ChefDetails from "../ChefDetails/ChefDetails";
+import Chef from "../Chef/Chef";
 
 const Home = () => {
     const [chefs, setChefs] = useState([]);
-
-//   const chefDetails = useLoaderData();
-//   const { id } = useParams();
 
   useEffect(() => {
     fetch("http://localhost:5000/chef")
@@ -67,6 +64,7 @@ const Home = () => {
                 chef={chef}
                 ></ChefDetails>)
             }
+            
 
           {/* <div className="row row-cols-1 row-cols-md-2 g-4 chef-img mt-4">
             <div className="chef">

@@ -1,33 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
-import { useLoaderData, useParams } from "react-router-dom";
-import Chef from "../Chef/Chef";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import './ChefDetails.css'
 
 const ChefDetails = ({ chef }) => {
   const { img, years_of_experience, number_of_recipes, id, name, likes } = chef;
-  // const { id } = useParams();
+  const [singleChef, setSingleChef] = useState([]);
+
   const chefDetails = useLoaderData();
-  // const {id} = useParams();
-  // const chefDetails = useLoaderData();
-  // console.log(id, chefDetails);
+
   useEffect(() => {
     fetch("http://localhost:5000/chef")
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => setSingleChef(data))
       .catch((error) => console.error(error));
   }, []);
   return (
-    <div>
-      {/* <h1>chef details page</h1>
-      {chefDetails?.map((cheff) => (
-        <Chef
-          key={cheff.id}
-          cheff = {cheff}
-        ></Chef>
-      ))} */}
-
-<div className="row row-cols-1 row-cols-md-2 g-4  d-flex justify-content-center text-center">
+    <>
+<div className="row row-cols-1 row-cols-md-2 g-4  d-flex justify-content-center text-center mt-4">
   <div className="col">
     <div className="card">
       <img src={img} className="card-img-top c-shape" alt="..."/>
@@ -38,13 +28,16 @@ const ChefDetails = ({ chef }) => {
           <h4>number of recipes : {number_of_recipes} </h4> <br />
           <h4>likes: {likes}</h4> <br />
         </p>
-        <button>View Recipe</button>
+        <Link to={`/singleChef/${id}`}>
+        <Button className="btn-success">View Recipe</Button>
+
+        </Link>
       </div>
     </div>
   </div>
 </div>
 
-    </div>
+    </>
   );
 };
 

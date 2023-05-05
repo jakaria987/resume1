@@ -9,6 +9,7 @@ import Home from "../components/Home/Home/Home";
 import PrivateRoute from "./PrivateRoute";
 import Chef from "../components/Home/Chef/Chef";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import Footer from "../components/Shared/Footer/Footer";
 
 
 
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
                 path: '/register',
                 element: <Register></Register>
             }
+            
         ]
     },
     {
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path:'/blog',
-                element: <PrivateRoute><Blog></Blog></PrivateRoute>
+                element: <Blog></Blog>
             },
             {
                 path: 'chef/:id',
@@ -53,8 +55,10 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><Chef></Chef></PrivateRoute>
             }
             
+            
 
         ]
     }
+    
 ])
 export default router;

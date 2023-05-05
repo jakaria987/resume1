@@ -7,6 +7,8 @@ const Register = () => {
     const {createUser} = useContext(AuthContext);
     const [error, setError] = useState("");
 
+    const [ok, setOk] = useState('');
+
     const handleRegister = event => {
         event.preventDefault();
 
@@ -31,11 +33,14 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
 
+        
+
         console.log(name, photo, email, password);
         createUser(email, password)
         .then(result => {
             const createdUser = result.user;
             console.log(createdUser);
+            setOk("registration Successful")
         })
         .catch(error => {
             console.log(error);
@@ -46,6 +51,7 @@ const Register = () => {
   return (
     <Container className="w-25 mx-auto">
       <h3>Please Register</h3>
+      <h4 className="text-success">{ok}</h4>
       {/* <h1>{error}</h1> */}
       <Form onSubmit={handleRegister}>
         <Form.Group className="mb-3" controlId="formBasicEmail">

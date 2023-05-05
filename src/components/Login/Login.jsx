@@ -1,13 +1,17 @@
 import React, { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../firebase/firebase.config";
 
 const Login = () => {
     const {signIn} = useContext(AuthContext);
     const [error, setError] = useState("");
 
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = event => {
         event.preventDefault();
@@ -21,15 +25,43 @@ const Login = () => {
         .then(result => {
             const loggedUser = result.user;
             setError(loggedUser);
-            navigate('/')
+            navigate(from, {replace:true})
         })
         .catch(error => {
             setError("something doing wrong");
         })
     }
+    const [ok, setOk] = useState('');
+    const auth = getAuth(app);
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GoogleAuthProvider();
+    const handleGoogleSignIn = () => {
+      signInWithPopup(auth, googleProvider)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        setOk("Successfully Login by google")
+      })
+      .catch(error => {
+        console.log("error");
+      })
+    }
+    const handleGithubSignIn =() => {
+      signInWithPopup(auth, githubProvider)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        setOk("Successfully Login by github")
+      })
+      .catch(error => {
+        console.log("error");
+      })
+    }
   return (
     <Container className="w-25 mx-auto">
+      <h4 className="text-success">{ok}</h4>
         <h3>Please Login</h3>
+        
         
       <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -54,12 +86,8 @@ const Login = () => {
                 Register
             </Link>
         </Form.Text>
-        <Form.Text className="text-success">
-           
-          </Form.Text>
-        <Form.Text className="text-danger">
-           
-          </Form.Text>
+        <button onClick={handleGoogleSignIn} className="mt-4 btn-success">SIgn in with Google</button>
+        <button onClick={handleGithubSignIn} className="mt-2">SIgn in with Github</button>
       </Form>
     </Container>
   );

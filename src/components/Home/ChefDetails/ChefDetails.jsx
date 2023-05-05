@@ -7,7 +7,7 @@ const ChefDetails = ({ chef }) => {
   const { img, years_of_experience, number_of_recipes, id, name, likes } = chef;
   const [singleChef, setSingleChef] = useState([]);
 
-  const chefDetails = useLoaderData();
+  // const chefDetails = useLoaderData();
 
   useEffect(() => {
     fetch("https://assignment10-server-jakaria987.vercel.app/chef")

@@ -9,7 +9,7 @@ import NavigationBar from '../components/Shared/NavigationBar/NavigationBar';
 const Main = () => {
     return (
         <div>
-            <Header></Header>
+            {/* <Header></Header> */}
             <NavigationBar></NavigationBar>
             {/* <Home></Home> */}
             <Outlet></Outlet>

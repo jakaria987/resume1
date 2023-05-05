@@ -1,8 +1,8 @@
 import React from 'react';
 
 const ErrorPage = () => {
-    const error = useRouteError()
-    console.log(error);
+    // const error = useRouteError()
+    // console.log(error);
     return (
         <div className='text-center pt-48'>
             <h1 className='text-7xl font-bold '>Opps</h1>

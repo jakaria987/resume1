@@ -12,7 +12,7 @@ const Register = () => {
     const handleRegister = event => {
         event.preventDefault();
 
-        // if(/[a-zA-Z]{,6}/.test(password)){
+        // if(password.length < 6){
         //     setError('password should be less than six characters');
         //     return;
         // }

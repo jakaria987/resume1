@@ -9,9 +9,6 @@ import Home from "../components/Home/Home/Home";
 import PrivateRoute from "./PrivateRoute";
 import Chef from "../components/Home/Chef/Chef";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
-import Footer from "../components/Shared/Footer/Footer";
-
-
 
 
 
@@ -19,7 +16,6 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <LoginLayout></LoginLayout>,
-        errorElement: <ErrorPage></ErrorPage>,
         children : [
             {
                 path: '/',
@@ -46,13 +42,14 @@ const router = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
-                path: 'chef/:id',
+                path: 'chef',
                 element: <ChefDetails></ChefDetails>,
-                loader: ({params}) => fetch(`https://assignment10-server-jakaria987.vercel.app/chef/${params.id}`)
+                // loader: ({params}) => fetch(`https://assignment10-server-jakaria987.vercel.app/chef/${params.id}`)
             },
             {
                 path: 'singleChef/:id',
-                element: <PrivateRoute><Chef></Chef></PrivateRoute>
+                element: <PrivateRoute><Chef></Chef></PrivateRoute>,
+                
             }
             
             
